@@ -1,0 +1,156 @@
+/*
+    PRITHVI'S GARAGE - ASSIGNMENT 2
+    External Stylesheet
+
+    COLOR PALETTE
+    Blue:       #155EEF
+    Dark Blue:  #0B1F3A
+    Red:        #D90429
+    Light Blue: #EAF2FF
+    White:      #FFFFFF
+    Dark Gray:  #222222
+
+    The blue and red palette gives the site a motorcycle/performance
+    feel while keeping the website readable.
+*/
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    background-color: #EAF2FF;
+    color: #222222;
+    line-height: 1.6;
+}
+
+main {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 30px;
+}
+
+h1 {
+    color: #0B1F3A;
+    margin-top: 0;
+}
+
+nav {
+    background-color: #0B1F3A;
+    padding: 14px 18px;
+    margin-bottom: 24px;
+}
+
+nav a {
+    color: #FFFFFF;
+    text-decoration: none;
+    font-weight: bold;
+    margin-right: 18px;
+}
+
+nav a:hover {
+    color: #D90429;
+}
+
+.page-image {
+    width: 100%;
+    max-width: 700px;
+    height: auto;
+    display: block;
+    border-radius: 8px;
+    border: 3px solid #155EEF;
+    margin-bottom: 24px;
+}
+
+.content-card {
+    background-color: #FFFFFF;
+    padding: 24px;
+    margin-bottom: 24px;
+    border-left: 5px solid #D90429;
+    border-radius: 6px;
+    box-shadow: 0 2px 8px rgba(11, 31, 58, 0.12);
+}
+
+/* Assignment 1 paragraph styling moved from inline HTML into the external sheet. */
+.paragraph-one {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #155EEF;
+    font-size: 18px;
+    line-height: 1.6;
+}
+
+.paragraph-two {
+    font-family: Georgia, serif;
+    color: #222222;
+    background-color: #EAF2FF;
+    padding: 15px;
+    border-left: 4px solid #D90429;
+}
+
+.paragraph-three {
+    font-family: 'Courier New', Courier, monospace;
+    color: #FFFFFF;
+    background-color: #0B1F3A;
+    padding: 15px;
+    border-radius: 4px;
+}
+
+.checklist-heading {
+    color: #D90429;
+    border-bottom: 2px solid #155EEF;
+    padding-bottom: 5px;
+}
+
+.checklist {
+    line-height: 1.8;
+    font-size: 16px;
+}
+
+.checklist li::marker {
+    color: #D90429;
+}
+
+table {
+    border-collapse: collapse;
+    width: 80%;
+    max-width: 700px;
+    text-align: left;
+    background-color: #FFFFFF;
+}
+
+th,
+td {
+    border: 1px solid #9BB7E8;
+    padding: 10px;
+}
+
+th {
+    background-color: #155EEF;
+    color: #FFFFFF;
+}
+
+tr:nth-child(even) {
+    background-color: #EAF2FF;
+}
+
+.about-introduction {
+    font-size: 18px;
+}
+
+.social-links a {
+    color: #155EEF;
+    font-weight: bold;
+    margin-right: 14px;
+}
+
+.social-links a:hover {
+    color: #D90429;
+}
+
+@media (max-width: 700px) {
+    main {
+        padding: 20px;
+    }
+
+    table {
+        width: 100%;
+    }
+}
