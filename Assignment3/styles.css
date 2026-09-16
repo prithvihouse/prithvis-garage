@@ -1,0 +1,248 @@
+/*
+    PRITHVI'S GARAGE
+    CSS Essentials Layout
+
+    COLOR PALETTE
+    Blue:       #155EEF
+    Dark Blue:  #0B1F3A
+    Red:        #D90429
+    Light Blue: #EAF2FF
+    White:      #FFFFFF
+    Dark Gray:  #222222
+
+    LAYOUT TECHNIQUES
+    - CSS Grid creates the main navigation/content layout.
+    - CSS Grid also creates the hero and card sections.
+    - Flexbox creates the navigation links.
+*/
+
+* {
+    box-sizing: border-box;
+}
+
+/* General page styling. */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #EAF2FF;
+    color: #222222;
+    line-height: 1.6;
+}
+
+/*
+    MAIN GRID LAYOUT
+    The first column is navigation and the second is page content.
+*/
+.site-layout {
+    min-height: 100vh;
+    display: grid;
+    grid-template-columns: 230px 1fr;
+}
+
+/* Navigation column. */
+.sidebar {
+    background-color: #0B1F3A;
+    color: #FFFFFF;
+    padding: 28px 20px;
+    border-right: 5px solid #D90429;
+    position: sticky;
+    top: 0;
+    height: 100vh;
+}
+
+.sidebar h1 {
+    margin: 0 0 30px;
+    color: #FFFFFF;
+    font-size: 1.7rem;
+}
+
+.sidebar h1 span {
+    color: #D90429;
+}
+
+/*
+    FLEXBOX NAVIGATION
+    Flexbox arranges the links vertically and controls the spacing.
+*/
+.sidebar nav {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.sidebar nav a {
+    color: #FFFFFF;
+    text-decoration: none;
+    padding: 10px 12px;
+    border-left: 3px solid transparent;
+}
+
+.sidebar nav a:hover,
+.sidebar nav a.active {
+    background-color: #155EEF;
+    border-left-color: #D90429;
+}
+
+/* Main content area. */
+.main-content {
+    padding: 0 38px 45px;
+    min-width: 0;
+}
+
+/* Header for each page. */
+.topbar {
+    padding: 28px 0 18px;
+    border-bottom: 2px solid #9BB7E8;
+    margin-bottom: 28px;
+}
+
+.topbar h2 {
+    margin: 0;
+    color: #0B1F3A;
+}
+
+.topbar p {
+    margin: 6px 0 0;
+    color: #333333;
+}
+
+/*
+    HERO GRID
+    Two columns: large image + content panel.
+*/
+.hero-grid {
+    display: grid;
+    grid-template-columns: 1.55fr 1fr;
+    gap: 26px;
+    align-items: stretch;
+}
+
+.hero-image {
+    width: 100%;
+    min-height: 340px;
+    object-fit: cover;
+    display: block;
+    border: 3px solid #155EEF;
+    border-radius: 8px;
+}
+
+.hero-card {
+    background-color: #FFFFFF;
+    border-left: 5px solid #D90429;
+    padding: 26px;
+    border-radius: 6px;
+    box-shadow: 0 3px 10px rgba(11, 31, 58, 0.12);
+}
+
+.hero-card h2 {
+    color: #0B1F3A;
+}
+
+.accent {
+    color: #D90429;
+}
+
+/*
+    CARD GRID
+    Three equal columns on wider screens.
+*/
+.card-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    margin-top: 26px;
+}
+
+.card {
+    background-color: #FFFFFF;
+    padding: 22px;
+    border-top: 4px solid #D90429;
+    border-radius: 6px;
+    box-shadow: 0 3px 10px rgba(11, 31, 58, 0.10);
+}
+
+.card h3 {
+    color: #0B1F3A;
+}
+
+/* checklist. */
+ul {
+    padding-left: 20px;
+}
+
+li::marker {
+    color: #D90429;
+}
+
+/* Table. */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+    background-color: #FFFFFF;
+}
+
+th,
+td {
+    padding: 12px;
+    border: 1px solid #9BB7E8;
+    text-align: left;
+}
+
+th {
+    background-color: #155EEF;
+    color: #FFFFFF;
+}
+
+/* Link styling. */
+.main-content a {
+    color: #155EEF;
+    font-weight: bold;
+}
+
+.main-content a:hover {
+    color: #D90429;
+}
+
+footer {
+    margin-top: 35px;
+    padding-top: 18px;
+    border-top: 1px solid #9BB7E8;
+    color: #333333;
+}
+
+/*
+    RESPONSIVE LAYOUT
+    On smaller screens the sidebar moves above the content
+    and the multi-column grids become single-column sections.
+*/
+@media (max-width: 850px) {
+    .site-layout {
+        grid-template-columns: 1fr;
+    }
+
+    .sidebar {
+        position: static;
+        height: auto;
+        border-right: none;
+        border-bottom: 5px solid #D90429;
+    }
+
+    .sidebar nav {
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+
+    .main-content {
+        padding: 0 20px 35px;
+    }
+
+    .hero-grid,
+    .card-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .hero-image {
+        min-height: 250px;
+    }
+}
