@@ -6,12 +6,10 @@ These two assignments were rebuilt directly from the three HTML files uploaded f
 Folder: `Assignment2`
 
 This version:
-- Keeps three page names and relative navigation.
-- Keeps Yamaha R3 information and existing page content.
 - Moves the styling into `styles.css`.
 - Uses a BLUE + RED color palette.
 - Includes the color palette in comments inside the stylesheet.
-- Expands the About page using the same ideas already in your Assignment 1 so it better meets the requirement to explain why you created the site and what motivated you.
+- Expands the About page using the same ideas already in Assignment 1 so it better meets the requirement to explain why I created the site and what motivated me.
 - Includes social/project links on the About page.
 
 ## Assignment 3
