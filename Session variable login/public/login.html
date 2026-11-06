@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prithvi's Garage | Login</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js"></script>
+</head>
+<body>
+    <div class="site-layout">
+        <aside class="sidebar">
+            <h1>Prithvi's <span>Garage</span></h1>
+            <nav>
+                <a href="index.html">Home</a>
+                <a href="about.html">About</a>
+                <a href="rides.html">Rides &amp; Gear</a>
+                <a class="active" href="login.html">Login</a>
+            </nav>
+            <button id="theme-toggle" class="theme-toggle" type="button" aria-pressed="false">Switch to Dark Theme</button>
+        </aside>
+        <main class="main-content">
+            <header class="topbar">
+                <h2>LOGIN</h2>
+                <p>Log in to see your profile.</p>
+            </header>
+            <section class="card">
+                <!-- The form sends username and password to POST /login in server.js -->
+                <form action="/login" method="POST">
+                    <p><label>Username<br><input type="text" name="username" required></label></p>
+                    <p><label>Password<br><input type="password" name="password" required></label></p>
+                    <p><button type="submit">Log in</button></p>
+                </form>
+                <p>No account? <a href="signup.html">Sign up</a></p>
+            </section>
+        </main>
+    </div>
+</body>
+</html>

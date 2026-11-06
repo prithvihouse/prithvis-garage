@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prithvi's Garage | Sign Up</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js"></script>
+</head>
+<body>
+    <div class="site-layout">
+        <aside class="sidebar">
+            <h1>Prithvi's <span>Garage</span></h1>
+            <nav>
+                <a href="index.html">Home</a>
+                <a href="about.html">About</a>
+                <a href="rides.html">Rides &amp; Gear</a>
+                <a href="login.html">Login</a>
+            </nav>
+            <button id="theme-toggle" class="theme-toggle" type="button" aria-pressed="false">Switch to Dark Theme</button>
+        </aside>
+        <main class="main-content">
+            <header class="topbar">
+                <h2>SIGN UP</h2>
+                <p>Create an account for the garage.</p>
+            </header>
+            <section class="card">
+                <!-- The form sends these fields to POST /signup in server.js -->
+                <form action="/signup" method="POST">
+                    <p><label>First name<br><input type="text" name="first_name" required></label></p>
+                    <p><label>Last name<br><input type="text" name="last_name" required></label></p>
+                    <p><label>Username<br><input type="text" name="username" pattern="[A-Za-z0-9_]{3,30}" required></label></p>
+                    <p><label>Email<br><input type="email" name="email" required></label></p>
+                    <p><label>Password<br><input type="password" name="password" required></label></p>
+                    <p><label>Bike (optional)<br><input type="text" name="bike"></label></p>
+                    <p><label>Riding level<br>
+                        <select name="riding_level">
+                            <option>Beginner</option>
+                            <option>Intermediate</option>
+                            <option>Advanced</option>
+                        </select></label></p>
+                    <p><button type="submit">Create account</button></p>
+                </form>
+            </section>
+        </main>
+    </div>
+</body>
+</html>

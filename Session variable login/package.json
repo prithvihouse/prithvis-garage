@@ -1,0 +1,14 @@
+{
+  "name": "prithvis-garage",
+  "version": "1.0.0",
+  "description": "Prithvi's Garage - static site served by Express with a MySQL users table",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "express": "^4.21.0",
+    "express-session": "^1.18.0",
+    "mysql2": "^3.11.0"
+  }
+}
